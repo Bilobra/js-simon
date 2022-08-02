@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+body{
+    background-color: cadetblue;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+#timer-wrapper{
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 700;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 13px;
+}
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
