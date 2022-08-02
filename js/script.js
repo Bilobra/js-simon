@@ -14,17 +14,35 @@ function generaRandom(min, max) {
 let i = 0
 do {
     const randomNumber = generaRandom(1, 50);
-    if (numList.includes(randomNumber) == false){
+    if (numList.includes(randomNumber) == false) {
         numList.push(randomNumber)
     }
     i++
-  }while (numList.length < 5)
+} while (numList.length < 5)
 
-  console.log(numList)
-  alert(numList);
+console.log(numList)
+alert(numList);
 
 
-  
+
+
+
+let j = 0
+do {
+    const userNum = Math.abs(parseInt(prompt('inserisci un numero')))
+
+    if (userList.includes(userNum) == false) {
+        userList.push(userNum)
+    } else if (isNaN(userNum)) {
+        prompt('non hai inserito un numero')
+    }
+    j++
+} while (userList.length < 5)
+
+console.log(userList)
+
+
+
 // far fisualizzare all'utente con un alert 5 numeri
 // funzione che genera ARRAY di numeri con parametri specifici
 // function getArrayOfRandomInt(length, min, max) {
