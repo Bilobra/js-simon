@@ -2,7 +2,7 @@
 console.log('prova prova pp')
 
 const numList = []
-const userList = []
+const promptList = []
 
 // FUNZIONI
 
@@ -10,6 +10,8 @@ const userList = []
 function generaRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
 
 let i = 0
 do {
@@ -26,51 +28,21 @@ alert(numList);
 
 
 
-
-let j = 0
-do {
-    const userNum = Math.abs(parseInt(prompt('inserisci un numero')))
-
-    if (userList.includes(userNum) == false) {
-        userList.push(userNum)
-    } else if (isNaN(userNum)) {
-        prompt('non hai inserito un numero')
+for (let i = 0; i < 5; i++) {
+    numPrompt = parseInt(prompt('inserisci i numeri che ricordi'))
+    for (let j = 0; j < numList.length; j++) {
+        if (numPrompt == numList[j]) {
+            promptList.push(numPrompt)
+        }
     }
-    j++
-} while (userList.length < 5)
+}
 
-console.log(userList)
+alert('hai indovinato ' + promptList)
+console.log(promptList)
 
 
 
-// far fisualizzare all'utente con un alert 5 numeri
-// funzione che genera ARRAY di numeri con parametri specifici
-// function getArrayOfRandomInt(length, min, max) {
 
-//     const numeri = []
 
-//     for (let i = 0; i < length; i++) {
-//         const n = getRandomIntInclusive(min, max)
-//         console.log(n)
-//         numeri.push(n)
-//     }
-
-//     return numeri
-// }
-
-// const arrayDiNumeri = getArrayOfRandomInt(5, 1, 100)
-// console.log(arrayDiNumeri)
-// alert(arrayDiNumeri)
-
-// let numeriUtente = 0
-
-// do {
-//     const numberIns = Math.abs(parseInt(prompt('inserisci i numeri che ti ricordi')));
-//     if (numberIns)
-// }
-
-// do{const numberIns = parseInt(prompt('inserisci i numeri che ti ricordi'));
-// console.log(numberIns)
-// }while (isNaN(numeriUtente) || numeriUtente == arrayDiNumeri.length)
 
 
