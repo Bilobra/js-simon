@@ -30,35 +30,35 @@ do {
 } while (numList.length < 5)
 
 console.log(numList)
-alert('prova a memorizzare questi numeri in 60 secondi' + numList);
+alert('prova a memorizzare questi numeri in 60 secondi  ' + numList);
 
 // aggancio la funzione setTime 
 // genero un prompt per 5 volte 
 // se il numero nel prompt è incluso nell'array del random, lo pusho e lo stampo nel doc 
-let timer = 0
-setTimeout(function(){
-    timer++
-    timerGame.innerHTML = timer
+
+setTimeout(function() {
+
+
     for (let i = 0; i < 5; i++) {
-        do{
+        do {
             numPrompt = parseInt(prompt('inserisci i numeri che ricordi'))
             for (let j = 0; j < numList.length; j++) {
                 if (numPrompt == numList[j]) {
                     promptList.push(numPrompt)
                     messageEl.innerHTML = ` hai indovinato : ${promptList} `
-                    scoreEl.innerHTML= `hai totalizzato ${promptList.length} punti`
+                    scoreEl.innerHTML = `hai totalizzato ${promptList.length} punti`
 
-                }else{
+                } else {
                     messageEl.innerHTML = `non hai indovinato nemmeno un numero`
-                    
+
                 }
             }
 
-        }while(isNaN(numPrompt))
+        } while (isNaN(numPrompt))
     }
-    
+
     // alert('hai indovinato ' + promptList)
-   
+
     console.log(promptList)
 
 }, 3000)
