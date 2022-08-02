@@ -1,6 +1,9 @@
 // console di prova
 console.log('prova prova pp')
 
+const messageEl = document.querySelector('.message')
+const scoreEl = document.querySelector('.score')
+
 const numList = []
 const promptList = []
 
@@ -27,18 +30,22 @@ alert(numList);
 
 
 
-
-for (let i = 0; i < 5; i++) {
-    numPrompt = parseInt(prompt('inserisci i numeri che ricordi'))
-    for (let j = 0; j < numList.length; j++) {
-        if (numPrompt == numList[j]) {
-            promptList.push(numPrompt)
+setTimeout(function(){
+    for (let i = 0; i < 5; i++) {
+        numPrompt = parseInt(prompt('inserisci i numeri che ricordi'))
+        for (let j = 0; j < numList.length; j++) {
+            if (numPrompt == numList[j]) {
+                promptList.push(numPrompt)
+                messageEl.innerHTML = ` hai indovinato : ${promptList} `
+                scoreEl.innerHTML= `hai totalizzato ${promptList.length} punti`
+            }
         }
     }
-}
+    
+    alert('hai indovinato ' + promptList)
+    console.log(promptList)
 
-alert('hai indovinato ' + promptList)
-console.log(promptList)
+}, 3000)
 
 
 
